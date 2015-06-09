@@ -1,64 +1,411 @@
 ﻿<!doctype html>
-<html lang="en" ng-app="app">
-<head> 
-    <meta charset="utf-8">           
-    <title>maya</title>        
-    <meta name="viewport" content="width=device-width, initial-scale=1">                
-    <link rel="shortcut icon" href="favicon.ico" />
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <link rel="stylesheet" type="text/css" href="<%= grunt.config.get('pkg.name') %>.css" />
-    <script type="text/javascript" src="jquery.js"></script>    
-    <script type="text/javascript" src="angular.js"></script>    
-    <script type="text/javascript" src="bootstrap.js"></script>      
-    <script type="text/javascript" src="<%= grunt.config.get('pkg.name') %>.js"></script>    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body ng-cloak>
-    <p></p>
+<!-- NAVBAR
+================================================== -->
+<body style="">
+    <!-- Carousel
+    ================================================== -->
+
     <div class="mayafabric"></div>
-    <p></p>
-    <div class="navbar-wrapper">
-        <div class="container">
-            <div class="navbar navbar-default navbar-inner" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Maya</a>
+    <div class="carousel-wrapper">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="7000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/hands.jpg">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Maya Childcare Inc</h1>
+                            <p>
+                                Giving children a better start in life
+                            </p>
+                        </div>
                     </div>
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li ng-class="{active: isActive('/program')}"><a href="/program">Program</a></li>
-                            <li ng-class="{active: isActive('/news')}"><a href="/news">News</a></li>
-                            <li ng-class="{active: isActive('/contact')}"><a href="/contact">Contact</a></li>
-                            <li ng-class="{active: isActive('/store')}"><a href="/store">Store</a></li>
-                        </ul>
-                        <div class="pull-right">
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                                <input type="hidden" name="cmd" value="_s-xclick">
-                                <input type="hidden" name="hosted_button_id" value="S456YHU5KG9ZJ">
-                                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
-                                       name="submit" alt="PayPal - The safer, easier way to pay online!">
-                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                            </form>
+                </div>
+                <div class="item">
+                    <img src="img/doctors.jpg">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Maya Childcare Inc</h1>
+                            <p>
+                                Giving children a better start in life
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/Atol_with_friends.jpg">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Maya Childcare Inc</h1>
+                            <p>
+                                Giving children a better start in life
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    </div>    
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <img class="img-circle" src="img/usa.jpg" style="width: 40px; height: 40px;">
+                <h4>Maya US</h4>
+                <p>
+                    Maya Childcare Incorporated is a registered 501(c)(3) public charity in the US.
+                    It works alongside the Maya Childcare
+                    Trust in the UK to support the Acorn Childcare Center in
+                    Quetzaltenango, Guatemala.<br />
+
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="ng-pristine ng-valid">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="S456YHU5KG9ZJ">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-circle" src="img/uk.jpg" style="width: 40px; height: 40px;">
+                <a href="http://www.mayachildcare.org/">
+                    <h4>Maya UK</h4>
+                </a>
+                <p>
+                    The Maya Childcare Trust is a UK Charity that was established in 2004.
+                </p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-circle" src="img/acorn.gif" style="width: 40px; height: 40px;">
+                <a href="#cib">
+                    <h4>Acorn Childcare Center</h4>
+                </a>
+                <p>
+                    The Center provides good nutrition, care and pre-school education for children living in poverty in Guatemala.
+                </p>
+            </div>
+        </div><!-- /.row -->
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+        <div class="featurette">
+          <div class="featurette-image pull-right text-center">
+            <img class="img-circle" src="img/WHWalk.jpg" style="width: 200px; height: 140px;">            
+            <div class="well-sm">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="ng-pristine ng-valid">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="S456YHU5KG9ZJ">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
+            </div>  
+          </div>
+            <h2 class="featurette-heading">Walk to Woods Hole 2015</h2>
+            <p>              
+              We are walking, pushing strollers, cycling, scooting, and skipping from Falmouth to Woods Hole to raise money for a childcare center in Guatemala. 
+              The funds we raise will allow the Acorn Childcare Center to continue to provide good nutrition, a safe and caring environment 
+              and early years education to children living in poverty. Your support is desperately needed to keep the center open. Thank-you so much!
+              
+              <div class="padding5 text-center">
+                <ul class="padding5 list-unstyled text-left">
+                  <li><strong>$25 pays for safe drinking water for the Center for a month</strong></li>
+                  <li><strong>$70 pays for art resources for a month</strong></li>
+                  <li><strong>$160 pays for food for a week at the Center</strong></li>
+                  <li><strong>$450 pays for rent for the building for one month</strong></li>
+                </ul>
+              </div>
+              
+              <a href="https://www.google.com/maps/place/66+Depot+Ave,+Falmouth,+MA+02540/@41.5550629,-70.624986">Depot Street in Falmouth</a> village between 9.30am and 10.30am, on <strong>Sat. June 27th</strong>
+              
+              <div class="well-sm">
+                <ul>
+                  <li><a href="sponsorshipform2015.pdf">Printable Sponsorship form</a></li>
+                  <li><a href="Walk2WoodsHole.pdf">Printable Map</a></li>
+                </ul>                                
+              </div>
+              
+              <p>                                                                      
+              There will be a reception with refreshments at the Woods Hole Community Center at the end! (Wet weather plan to be confirmed!) 
+              The route is just under 4 miles long, and passes by some beautiful spots. It should be a lot of fun, and the more people involved the better!  
+              </p>
+          </p>                          
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette">
+            <div class="featurette-image pull-right">
+                <img class="img-circle" src="img/Boyinredshirt.jpg" style="width: 200px; height: 140px;">
+            </div>            
+            <h2 class="featurette-heading">About us</h2>
+            <p>
+                Maya Childcare Inc is a non-profit corporation that works to improve
+
+                the lives of children living in poverty in Guatemala.
+
+                It was founded in Massachusetts in June 2011. The directors
+
+                all volunteer their time and cover the administrative costs of the
+
+                organization themselves, so that every donation received goes
+
+                directly to supporting the Acorn Childcare Center in Guatemala.
+            </p>            
+            <h4>Meeting a Need</h4>
+            <p>
+                Nearly 3/4 of the population of Guatemala lives in poverty, with 1/5
+
+                living in extreme poverty. Nearly 1/2 of Guatemala’s children under 5
+
+                suffer from chronic malnutrition.
+
+            </p><p>
+                The first 5 years of children’s lives are of vital importance. The
+
+                way that their brains develop during this time will shape the way
+
+                that they live, their health, their learning, their relationships, and
+
+                their happiness throughout the rest of their lives. Poverty, poor
+
+                nutrition, and neglect can greatly damage healthy growth and brain
+
+                development.
+            </p><p>
+
+                The care and support offered to young children and their families
+
+                at the Acorn Childcare Center can make a profound and lasting
+
+                difference.
+            </p>
+
+            <ul class="list-unstyled">
+                <li>Employer ID 45-4237167</li>
+                <li>DLN 17053250370002</li>
+            </ul>
+
+            <div class="well-sm">
+                <div class="panel-group" id="directors">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#directors" href="#directorDetails">
+                                    Directors
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="directorDetails" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>President</td>
+                                                <td>Rachael Rhude</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Secretary</td>
+                                                <td>Erica Greeley</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Treasurer</td>
+                                                <td>Diane Rhude</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Communications Director</td>
+                                                <td>Cara Colgate</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Publicity Director</td>
+                                                <td>Barrie Wheeler</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div ng-view></div>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="mayafabric"></div>
-        <div class="col-md-offset-1">
-            <a href="mailto:info@mayachildcareus.org">
-                <span class="text-muted">Contact Maya</span></a>            
+        <hr class="featurette-divider">
+        <div class="featurette" id="cib">
+            <div class="featurette-image pull-right">
+                <img class="img-rounded" src="img/FebTrip.jpg" style="width: 200px; height: 140px;">
+            </div>
+            <h2 class="featurette-heading">Acorn Childcare Center</h2>
+            <p>
+                The Center (Centro Infantil Bellota) provides
+
+                essential care and early years support for 2 – 6 year olds.
+                It allows children to enjoy:
+
+                <strong>Good nutrition</strong> with a balanced breakfast, healthy snacks and a main
+
+                meal each day.
+
+
+                <strong> A safe and caring atmosphere</strong> that nurtures trusting relationships with
+
+                adults and with other children.
+
+                <strong>A stimulating educational environment</strong> that inspires and supports
+
+                active learning.
+
+            </p>
+            <p>
+                The Center cares for children from 8am to 5pm, allowing mothers
+
+                to work and older children, who might otherwise be responsible for
+
+                childcare, to attend school.
+
+                It works closely with parents providing support and involving them in the life
+
+                of the Center. Parents participate in monthly meetings, volunteer at the Center, and
+
+                contribute to special events and celebrations.
+
+            </p>
+            <p>
+                <a href="http://www.centrobellota.org/eng/index.php">
+                    <h4>More Center Info ... </h4>
+                </a>
+            </p>
         </div>
-    </footer>    
+
+        <hr class="featurette-divider">
+        <div class="featurette">
+            <div class="featurette-image pull-right">
+                <img class="img-rounded" src="img/numberpuzzle.jpg" style="width: 200px; height: 140px;">                                            
+                <p class="text-center">                    
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="ng-pristine ng-valid">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="S456YHU5KG9ZJ">
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>                    
+                </p>
+            </div>            
+            
+            <h2 class="featurette-heading">How you can help</h2>
+            <p>
+                By making a regular monthly contribution to Maya Childcare Inc you can help ensure that children and families at the Acorn Childcare
+
+                Center consistently receive the support that they need.
+
+            </p><p>
+                It’s easy to do.
+            </p><p>
+                You can set up a regular donation by clicking on the <strong>DONATE</strong> link
+
+                above and selecting the box that says “Make This Recurring”
+
+                <ul>
+
+                    <li>
+                        <strong>$20</strong> pays for hygiene products for a month
+                        (toothbrushes, toothpaste, face cloths, soap)
+                    </li>
+                    <li><strong>$25</strong> pays for safe drinking water for the Center for a month</li>
+
+                    <li><strong>$70</strong> pays for art & craft resources for a month</li>
+
+                    <li><strong>$450</strong> pays for rent for the building for one month</li>
+                </ul>
+
+                Every contribution helps!
+
+            </p>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="featurette">
+            <div class="featurette-image pull-right">
+                <img class="img-rounded" src="img/vol.jpg" style="width: 200px; height: 140px;">
+            </div>
+
+            <div class="featurette-image pull-right">
+            </div>
+
+            <h2 class="featurette-heading">Volunteering</h2>
+            <p>
+                Volunteers make a valuable contribution to work at the Center, and are
+
+                warmly invited to share in the task of caring for children there.
+            </p><p>
+
+                In order to provide stability for children and continuity for staff at the
+
+                Center, those wishing to work directly with children are usually asked to
+
+                make a commitment of at least a month. However, there is a wide variety
+
+                of work to be done at the Center, and those with less time available, with
+
+                more limited Spanish, or with particular skills to offer can help by preparing
+
+                play resources, doing maintenance work, developing a garden area,
+
+                making children’s costumes, decorating the Center’s walls, taking photos,
+
+                translating documents, fund-raising, or carrying out a range of other
+
+                creative projects for the benefit of children.
+            </p><p>
+
+                If you would like to apply to volunteer, you can contact the Director at
+
+                <strong><a href="mailto:info@centrobellota.org">info@centrobellota.org</a></strong>
+
+
+            </p>
+        </div>
+        
+        <div class="mayafabric"></div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>
+                <a href="mailto:info@mayachildcareus.org">Contact Maya</a>    
+            </p>         
+        </footer>
+
+    </div><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="bootstrap.js"></script>
 </body>
 </html>
